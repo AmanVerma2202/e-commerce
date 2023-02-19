@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --primary:indianred;
+    --secondary:rgb(36, 28, 45);
+    --light:#2f3640;
+    --primaryMod:rgb(210, 29, 29);
+}
+
+header{
+    width: 100%;
+    height: auto;
+}
+/*! nav-first starts from here*/
+.nav-first{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(229, 249, 140);
+    gap: 100px;
+    flex-wrap: wrap;
+    text-align: center;
+    /* position: relative; */
+}
+
+
+.nav-first .left{
+    flex-basis: 50%;
+    display: flex;
+    gap: 7px;
+}
+
+.nav-first .left span{
+    color: var(--secondary);
+    /* margin: 50px; */
+}
+
+
+.nav-first .left a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+.nav-first .right .bi{
+    background-color: var(--primary);
+    color: white;
+    margin: 0px 5px;
+    padding: 3px;
+    border-radius: 3px;
+    transition: .6s;
+    cursor: pointer;
+    /* position: absolute; */
+
+}
+
+.nav-first .right .bi:hover{
+    transform: rotate(360deg);
+    color:black;
+}
+/*! nav-first ends here*/
+
+
+/*! nav second start here*/
+.nav-second{
+    width: 100%;
+    height:100px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.nav-second .start-left,.middle,.end-right{
+    flex-basis: 30%;
+    margin: auto;
+    cursor: pointer;
+}
+.nav-second .start-left i{
+    margin-left: 15px;
+    margin-right: 3px;
+}
+.nav-second .end-right i{
+    margin-right: 3px;
+}
+
+.nav-second .middle h1{
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 2rem;
+}
+/*!nav second ends here*/
+
+
+/*! nav third starts here*/
+.nav-third{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(229, 249, 140);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.nav-third ul{
+    list-style: none;
+    text-align: center;
+}
+.nav-third ul li{
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    z-index: 99;
+}
+.nav-third ul li a{
+    text-decoration: none;
+    color: var(--light);
+    font-weight: bold;
+    display: block;
+}
+
+.nav-third ul li a:hover{
+    color: var(--primary);
+}
+
+.nav-third ul li i{
+    color:var(--primary);
+    margin: 0px 5px;
+}
+
+.nav-third ul ul {
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.nav-third ul ul li{
+    background-color: rgb(229, 249, 140);
+    border-bottom: 2px solid var(--primary);
+}
+
+.nav-third ul li:hover>ul{
+    display: block;
+}
+
+
+
+/*! section start here*/
+
+.featured{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,rgb(46, 46, 46),rgba(255,255,255,0.01)), 
+                    url("img/g1.jpg");
+    position:relative;
+    background-size: cover;
+    background-position: top;
+
+}
+
+.featured-text{
+    position: absolute;
+    top: 350px;
+    left: 200px;
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+.featured-text button{
+    width: 120px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px
+}
+
+.featured-text button:hover{
+    cursor: pointer;
+    background-color: var(--primary);
+    color: white;
+}
+
+
+
+/*! latest section starts from here*/
+
+.latest{
+    padding: 50px 100px;
+    /* text-align: center; */
+}
+.product-intro{
+    text-align: center;
+}
+.product-intro h1{
+    color: var(--primary);
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.product-intro h1 span{
+    color: var(--secondary);
+}
+.product-intro p{
+    margin-top: 7px;
+
+}
+
+
+/*!cards start from here*/
+.card-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 4rem 0;
+}
+.card-container .card{
+    flex-basis: 20%;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover img , .card:hover h1{
+    width: 80%;
+    color: var(--primary);
+}
+
+.card::before{
+    content: "20% off";
+    width: 25%;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    padding: 0px 4px;
+    transform: rotate(-20deg);
+}
+.card i{
+    color: goldenrod;
+    margin: 10px 0;
+}
+
+.card button{
+    width: 80px;
+    height: 30px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    font-weight: bold;
+    background-color: white;
+}
+.card button:hover{
+    background-color: var(--primary);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/*! swiper start from here */
+
+.trends{
+    padding: 50px 100px;
+    background-color: rgba(0,0,0,0.01);
+}
+
+.trends .swiper {
+    width: 100%;
+    padding:50px;
+}
+
+.trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*! footer starts here*/
+.footer{
+    background-color: var(--secondary);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem;
+}
+.footer div{
+     flex-basis: 30%;
+}
+
+.footer .footer-left h1{
+    color: var(--primary);
+    letter-spacing: 0.1rem;
+}
+
+.footer .footer-middle i{
+    margin: 0px 5px;
+
+}
+
+
+
+
+/*! responsiveness starts from here*/
+@media only screen and (max-width:369px){
+    .nav-first{
+        position: relative;
+        z-index: 2;
+        background-color: white;
+        flex-wrap: nowrap;
+
+    }
+    .nav-first .right .bi{
+        font-size: 15px;
+        margin: 0px 5px;
+    
+    }
+    .nav-second{
+        width: 100%;
+        height:80px;
+    }
+    .nav-second .start-left i{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .nav-second .end-right i{
+        margin:0px 5px;
+    }
+    
+    .nav-second .middle h1{
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    .nav-third{
+        display: none;
+    }
+}
